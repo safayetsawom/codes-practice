@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+bool isprime(int n){
+    if (n<=1)return false;
+    for (int i=2; i<=n/2;i++){
+        if (n%i==0)return false;
+    }
+    return true;
+}
+int main() {
+    int p;
+    cin >> p; //how many times prime will be generated.
+    while (p > 0) {
+        int o, i; //2 numbers from to
+        bool x=false;
+        cin >> o >> i;
+        for (o; o < i + 1; o++) {
+            bool x= isprime(o);
+            if(x== true){
+                cout<<o<<endl;
+            }else{
+                continue;
+        }
+    }
+        p--;
+}
+}
