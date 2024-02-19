@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+int main() {
+    int p;
+    cin >> p;
+    while (p--) {
+        int o, i;
+        cin >> o >> i;
+        for (o; o <= i; o++) {
+            bool flag = 0;
+            for (int j = 2; j <= sqrt(o); ++j) {
+                if (o % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0 && o != 1)
+                cout << o << endl;
+        }
+        cout << endl;
+    }
+}
