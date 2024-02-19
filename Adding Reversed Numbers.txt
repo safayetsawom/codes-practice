@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int reverse(int n){
+    int remainder,reversed=0;
+    while(n != 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+
+    return reversed;
+}
+
+int main(){
+int n,a,b;
+cin>>n;
+cout<<endl;
+while(n--){
+    cin>>a>>b;
+    a= reverse(a);
+    b= reverse(b);
+    int ans=a+b;
+    ans= reverse(ans);
+    cout<<ans<<endl;
+}
+
+}
