@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int calc(int a,int  b) {
+    int x = 0;
+    int div = b;
+    while(a/b > 0) {
+        x += (a/b);
+        b *= div;
+    }
+    return x;
+}
+int main() {
+
+    int t;
+    cin>>t;
+    while(t--) {
+        int n;
+        cin>>n;
+
+        cout<<calc(n,5)<<endl;
+    }
+}
